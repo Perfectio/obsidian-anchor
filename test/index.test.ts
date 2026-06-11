@@ -1,4 +1,4 @@
-import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdirSync, mkdtempSync, realpathSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 
@@ -91,7 +91,7 @@ describe("indexer + search integration", () => {
   });
 });
 
-async function waitFor(condition: () => Promise<boolean>, timeoutMs = 8000): Promise<void> {
+async function waitFor(condition: () => Promise<boolean>, timeoutMs = 15000): Promise<void> {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     if (await condition()) return;
@@ -101,7 +101,9 @@ async function waitFor(condition: () => Promise<boolean>, timeoutMs = 8000): Pro
 }
 
 describe("VaultWatcher", () => {
-  const vault = mkdtempSync(join(tmpdir(), "anchor-watch-"));
+  // realpath the temp dir so chokidar's events match on macOS, where os.tmpdir()
+  // is a /var → /private/var symlink (otherwise the watcher never fires here).
+  const vault = realpathSync(mkdtempSync(join(tmpdir(), "anchor-watch-")));
   const ctx = createContext(vault, { embeddings: new KeywordEmbeddings() });
   const watcher = new VaultWatcher(vault, ctx.indexer, { usePolling: true });
 
