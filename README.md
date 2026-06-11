@@ -7,6 +7,8 @@
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue)](./LICENSE)
 [![node >= 20](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org)
 
+![Anchor refuses "we use MongoDB" against a note that says PostgreSQL, and grounds the supported claim with its exact block citation.](assets/hero.svg)
+
 Anchor is a reliability-first [MCP](https://modelcontextprotocol.io) server for
 [Obsidian](https://obsidian.md). Every other Obsidian MCP helps an AI *read*
 your vault. Anchor makes it **prove** what it says: it checks each claim against
@@ -17,8 +19,6 @@ relied on.
 > Other tools answer. Anchor answers *and tells you when it doesn't know.*
 
 🚧 **Early development** (v0.2), built in the open.
-
-<!-- TODO: add demo.gif here — the grounded-vs-refused contrast (the money shot). -->
 
 ---
 
