@@ -1,0 +1,88 @@
+{"claim": "We chose Postgres as our primary data store.", "expected": "grounded"}
+{"claim": "Sessions use JWT tokens.", "expected": "grounded"}
+{"claim": "Database backups run every night.", "expected": "grounded"}
+{"claim": "We use Stripe for payments.", "expected": "grounded"}
+{"claim": "Sarah leads the design team.", "expected": "grounded"}
+{"claim": "The web app is built with React.", "expected": "grounded"}
+{"claim": "We use Redis for caching.", "expected": "grounded"}
+{"claim": "Public API endpoints are rate limited.", "expected": "grounded"}
+{"claim": "The app is deployed on Fly.io.", "expected": "grounded"}
+{"claim": "The daily standup is at 9:30.", "expected": "grounded"}
+{"claim": "The frontend framework is React.", "expected": "grounded", "note": "paraphrase"}
+{"claim": "There are four engineers on the team.", "expected": "grounded", "note": "numeric word vs digit"}
+{"claim": "Invoices go out monthly.", "expected": "grounded", "note": "paraphrase"}
+{"claim": "The team meets every morning at 9:30.", "expected": "grounded", "note": "paraphrase of standup"}
+{"claim": "Data is encrypted at rest.", "expected": "grounded", "note": "from a callout"}
+{"claim": "Admin accounts require two-factor authentication.", "expected": "grounded", "note": "from a callout"}
+{"claim": "The Pro plan costs $20 per month.", "expected": "grounded", "note": "from a table"}
+{"claim": "We use Grafana for dashboards.", "expected": "grounded"}
+{"claim": "Alerts are sent to Slack.", "expected": "grounded"}
+{"claim": "The codebase is written in TypeScript.", "expected": "grounded"}
+{"claim": "Carol works on infrastructure.", "expected": "grounded"}
+{"claim": "The auth rewrite is planned for Q3 2026.", "expected": "grounded", "note": "from roadmap table"}
+{"claim": "The auth rewrite shipped in March.", "expected": "refused", "note": "contradicted by Auth timeline"}
+{"claim": "We chose MySQL for the database.", "expected": "refused", "note": "contradicted: Postgres over MySQL"}
+{"claim": "The web app is built with Vue.", "expected": "refused", "note": "contradicted: React over Vue"}
+{"claim": "The engineering team has ten members.", "expected": "refused", "note": "contradicted: 4 members"}
+{"claim": "The billing rewrite already shipped.", "expected": "refused", "note": "contradicted: scheduled for Q4"}
+{"claim": "The auth rewrite is complete.", "expected": "refused", "note": "contradicted: slipped to Q3"}
+{"claim": "The Pro plan is free.", "expected": "refused", "note": "contradicted by pricing table"}
+{"claim": "Backups run weekly.", "expected": "refused", "note": "contradicted: nightly"}
+{"claim": "The morning standup is at 2pm.", "expected": "refused", "note": "contradicted: 9:30"}
+{"claim": "We use Kubernetes for orchestration.", "expected": "refused", "note": "silent"}
+{"claim": "The mobile app supports offline mode.", "expected": "refused", "note": "silent: no mobile app"}
+{"claim": "Our uptime SLA is 99.99%.", "expected": "refused", "note": "silent"}
+{"claim": "The API uses GraphQL.", "expected": "refused", "note": "silent"}
+{"claim": "We use Datadog for monitoring.", "expected": "refused", "note": "silent: Grafana/Prometheus used, Datadog not mentioned"}
+{"claim": "We offer a 30-day free trial.", "expected": "refused", "note": "silent"}
+{"claim": "The app is available in Spanish.", "expected": "refused", "note": "silent"}
+{"claim": "We use gRPC for internal services.", "expected": "refused", "note": "silent"}
+{"claim": "The CEO is named Frank.", "expected": "refused", "note": "silent"}
+{"claim": "We use Memcached as the caching layer.", "expected": "refused", "note": "entity-substitution: notes say Redis"}
+{"claim": "We chose Angular for the web app.", "expected": "refused", "note": "entity-substitution: notes say React"}
+{"claim": "We use MongoDB as the primary data store.", "expected": "refused", "note": "entity-substitution: notes say Postgres"}
+{"claim": "The app is deployed on Heroku.", "expected": "refused", "note": "entity-substitution: notes say Fly.io"}
+{"claim": "We use Redis as the caching layer.", "expected": "grounded", "mode": "verbatim"}
+{"claim": "We use Stripe for payments.", "expected": "grounded", "mode": "verbatim"}
+{"claim": "We use Grafana for dashboards.", "expected": "grounded", "mode": "verbatim"}
+{"claim": "Sarah leads the design team.", "expected": "grounded", "mode": "verbatim"}
+{"claim": "Caching is handled by Redis.", "expected": "grounded", "mode": "paraphrase"}
+{"claim": "Payments go through Stripe.", "expected": "grounded", "mode": "paraphrase"}
+{"claim": "Metrics are collected with Prometheus.", "expected": "grounded", "mode": "paraphrase"}
+{"claim": "The web app is built with React.", "expected": "grounded", "mode": "paraphrase"}
+{"claim": "Admin accounts must use two-factor authentication.", "expected": "grounded", "mode": "paraphrase"}
+{"claim": "API endpoints are rate limited to 100 requests per minute.", "expected": "grounded", "mode": "numeric"}
+{"claim": "The Pro plan costs $20 per month.", "expected": "grounded", "mode": "numeric"}
+{"claim": "Standup is daily at 9:30.", "expected": "grounded", "mode": "numeric"}
+{"claim": "API endpoints are rate limited to 1000 requests per minute.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "The Pro plan costs $30 per month.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "The Team plan costs $100 per month.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "Data is encrypted at rest with AES-128.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "Database backups run nightly at 04:00 UTC.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "The engineering team has six members.", "expected": "refused", "mode": "numeric-mismatch"}
+{"claim": "We use Datadog for dashboards.", "expected": "refused", "mode": "entity-substitution"}
+{"claim": "Payments are processed with PayPal.", "expected": "refused", "mode": "entity-substitution"}
+{"claim": "Styling uses Bootstrap.", "expected": "refused", "mode": "entity-substitution"}
+{"claim": "Alerts are sent to PagerDuty.", "expected": "refused", "mode": "entity-substitution"}
+{"claim": "The billing rewrite is scheduled for Q4 2026.", "expected": "grounded", "mode": "temporal"}
+{"claim": "The billing rewrite is scheduled for Q2 2026.", "expected": "refused", "mode": "temporal"}
+{"claim": "Invoices are generated monthly.", "expected": "grounded", "mode": "temporal"}
+{"claim": "Invoices are generated weekly.", "expected": "refused", "mode": "temporal"}
+{"claim": "Support is email-only.", "expected": "grounded", "mode": "negation"}
+{"claim": "We offer 24/7 phone support.", "expected": "refused", "mode": "negation"}
+{"claim": "The free plan includes SSO.", "expected": "refused", "mode": "negation"}
+{"claim": "All public API endpoints are rate limited.", "expected": "grounded", "mode": "quantifier"}
+{"claim": "Two-factor authentication is required for all admin accounts.", "expected": "grounded", "mode": "quantifier"}
+{"claim": "Only some admin accounts require two-factor authentication.", "expected": "refused", "mode": "quantifier"}
+{"claim": "We use Kafka for event streaming.", "expected": "refused", "mode": "silent"}
+{"claim": "The team uses Jira for project management.", "expected": "refused", "mode": "silent"}
+{"claim": "We use GraphQL for the public API.", "expected": "refused", "mode": "silent"}
+{"claim": "The company is headquartered in Berlin.", "expected": "refused", "mode": "silent"}
+{"claim": "Alice works on the backend.", "expected": "grounded", "mode": "people"}
+{"claim": "Carol works on infrastructure.", "expected": "grounded", "mode": "people"}
+{"claim": "Alice works on the frontend.", "expected": "refused", "mode": "people"}
+{"claim": "Sarah leads the engineering team.", "expected": "refused", "mode": "people"}
+{"claim": "We use Redis for caching and Stripe for payments.", "expected": "grounded", "mode": "conjunction"}
+{"claim": "We use Postgres as the primary store and MongoDB for analytics.", "expected": "refused", "mode": "conjunction"}
+{"claim": "The auth rewrite is in Q3 2026 and the billing rewrite is in Q4 2026.", "expected": "grounded", "mode": "conjunction"}
+{"claim": "We use React for the web app and Vue for the admin panel.", "expected": "refused", "mode": "conjunction"}

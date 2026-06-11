@@ -1,0 +1,21 @@
+node_modules/
+dist/
+coverage/
+
+# Anchor's per-vault index, model cache, and edit snapshots
+.anchor/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Claude Code local settings (machine-specific permissions)
+.claude/settings.local.json

@@ -1,0 +1,28 @@
+name: Bug report
+description: Report a problem with Anchor
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected to happen instead.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Node version, MCP client (Claude Desktop / Code / Cursor), Anchor version
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (stderr)
+      description: Relevant lines from the server's stderr output.
+      render: shell

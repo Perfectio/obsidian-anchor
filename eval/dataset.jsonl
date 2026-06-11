@@ -1,0 +1,36 @@
+{"claim": "We use Postgres for the primary data store.", "passages": ["The decision was to use Postgres as the primary data store, chosen over MySQL."], "gold": "supported", "note": "direct paraphrase"}
+{"claim": "The team migrated the codebase to TypeScript.", "passages": ["We finished migrating the entire codebase to TypeScript last quarter."], "gold": "supported"}
+{"claim": "Database backups run every night.", "passages": ["Backups are scheduled nightly at 02:00 UTC."], "gold": "supported"}
+{"claim": "Sessions use JWT access tokens.", "passages": ["Auth issues short-lived JWT access tokens, with refresh tokens stored server-side."], "gold": "supported"}
+{"claim": "The app supports a dark theme.", "passages": ["Users can switch between light and dark themes in the settings panel."], "gold": "supported"}
+{"claim": "Deploying on weekends is not allowed.", "passages": ["Company policy prohibits production deploys on Saturdays and Sundays."], "gold": "supported"}
+{"claim": "The project kicked off in January 2026.", "passages": ["Kickoff happened in the first week of January 2026."], "gold": "supported"}
+{"claim": "Redis is used as the caching layer.", "passages": ["We introduced Redis as the cache for hot read queries."], "gold": "supported"}
+{"claim": "Public API endpoints are rate limited.", "passages": ["All public endpoints enforce a limit of 100 requests per minute."], "gold": "supported"}
+{"claim": "Sarah leads the design team.", "passages": ["Sarah was promoted to head of design in Q2 2026."], "gold": "supported"}
+{"claim": "The test suite runs on every pull request.", "passages": ["GitHub Actions runs the full test suite on each pull request."], "gold": "supported"}
+{"claim": "Storage is encrypted at rest.", "passages": ["Storage volumes are encrypted at rest using AES-256."], "gold": "supported"}
+{"claim": "The auth rewrite shipped in March.", "passages": ["The auth rewrite slipped to Q3 2026; March only covered the design phase, no code shipped."], "gold": "contradicted", "note": "stale/incorrect date"}
+{"claim": "We chose MySQL for the database.", "passages": ["We chose Postgres over MySQL for the primary store."], "gold": "contradicted"}
+{"claim": "The launch was a success.", "passages": ["The launch was rolled back within an hour after critical bugs were found."], "gold": "contradicted"}
+{"claim": "Backups run weekly.", "passages": ["Backups run every night, not weekly."], "gold": "contradicted"}
+{"claim": "The engineering team has ten people.", "passages": ["The engineering team currently has four members."], "gold": "contradicted", "note": "numeric mismatch"}
+{"claim": "The weekly sync is on Monday.", "passages": ["The weekly sync was moved from Monday to Thursday."], "gold": "contradicted"}
+{"claim": "We still support Internet Explorer.", "passages": ["We dropped support for Internet Explorer in 2025."], "gold": "contradicted"}
+{"claim": "The budget increased this year.", "passages": ["This year the budget was cut by twenty percent."], "gold": "contradicted"}
+{"claim": "Deployment is fully automated.", "passages": ["Deployments still require a manual approval step before release."], "gold": "contradicted"}
+{"claim": "The feature is enabled by default.", "passages": ["The feature is opt-in and ships disabled by default."], "gold": "contradicted"}
+{"claim": "We use Postgres for the primary data store.", "passages": ["The office relocated to a new building downtown this spring."], "gold": "neutral"}
+{"claim": "The auth rewrite shipped in March.", "passages": ["The marketing team launched a new brand campaign in March."], "gold": "neutral"}
+{"claim": "Database backups run nightly.", "passages": ["The cafeteria now offers vegan lunch options."], "gold": "neutral"}
+{"claim": "Sarah leads the design team.", "passages": ["The quarterly all-hands meeting is scheduled for next week."], "gold": "neutral"}
+{"claim": "Public API endpoints are rate limited.", "passages": ["We adopted a new logo and refreshed the brand colors."], "gold": "neutral"}
+{"claim": "Redis is the caching layer.", "passages": ["The team offsite is planned for the fall."], "gold": "neutral"}
+{"claim": "Tests run on every pull request.", "passages": ["A new intern joined the data team on Monday."], "gold": "neutral"}
+{"claim": "The app supports a dark theme.", "passages": ["Our cloud vendor contract renews annually in December."], "gold": "neutral"}
+{"claim": "We deploy via GitHub Actions.", "passages": ["The lunch-and-learn this week covered note-taking workflows."], "gold": "neutral"}
+{"claim": "Storage is encrypted at rest.", "passages": ["The roadmap review was rescheduled to Friday afternoon."], "gold": "neutral"}
+{"claim": "We use both Postgres and MongoDB.", "passages": ["We use Postgres for the primary store; we evaluated MongoDB but did not adopt it."], "gold": "contradicted", "note": "partial support: conjunction is false"}
+{"claim": "The rewrite finished ahead of schedule.", "passages": ["The rewrite finished exactly on its originally planned date."], "gold": "contradicted", "note": "ahead vs on-time"}
+{"claim": "All API endpoints are public.", "passages": ["Most endpoints require authentication; only the health check is public."], "gold": "contradicted", "note": "scope: all vs most"}
+{"claim": "The project uses Python.", "passages": ["The project is written primarily in TypeScript, with a few Python scripts for data prep."], "gold": "supported", "note": "adversarial: tempting to reject, but it does use Python"}
