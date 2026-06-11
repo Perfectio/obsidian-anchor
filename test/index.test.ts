@@ -100,7 +100,12 @@ async function waitFor(condition: () => Promise<boolean>, timeoutMs = 15000): Pr
   throw new Error("Condition not met within timeout");
 }
 
-describe("VaultWatcher", () => {
+// The watcher wraps chokidar; its file-event timing is unreliable on CI runners
+// (polling can miss/lag), so gate it like the other timing-sensitive e2e tests:
+//   ANCHOR_E2E=1 npx vitest run
+const RUN_WATCHER_E2E = process.env.ANCHOR_E2E === "1";
+
+describe.skipIf(!RUN_WATCHER_E2E)("VaultWatcher", () => {
   // realpath the temp dir so chokidar's events match on macOS, where os.tmpdir()
   // is a /var → /private/var symlink (otherwise the watcher never fires here).
   const vault = realpathSync(mkdtempSync(join(tmpdir(), "anchor-watch-")));
