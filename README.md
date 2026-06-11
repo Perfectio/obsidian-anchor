@@ -1,4 +1,4 @@
-# ⚓ Anchor
+# Anchor
 
 **Your AI assistant can't lie about your notes.**
 
@@ -18,7 +18,7 @@ relied on.
 
 > Other tools answer. Anchor answers *and tells you when it doesn't know.*
 
-🚧 **Early development** (v0.2), built in the open.
+**Early development** (v0.2), built in the open.
 
 ---
 
@@ -29,12 +29,12 @@ Anchor checks each claim against your notes:
 
 ```text
 Claim: "We chose Postgres as our primary data store."
-  ✅ grounded  (score 0.99)
+  GROUNDED  (score 0.99)
      Projects/Auth.md#^d4e1
      "Decision: use Postgres as the primary data store, chosen over MySQL…"
 
 Claim: "The auth rewrite shipped in March."
-  🚫 REFUSED — contradicted  (confidence 0.99)
+  REFUSED — contradicted  (confidence 0.99)
      Projects/Auth.md#^k93a
      "The auth rewrite slipped to Q3 2026. March only covered the design
       phase — no code shipped in March."

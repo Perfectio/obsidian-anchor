@@ -4,25 +4,29 @@
   <circle cx="38" cy="34" r="6" fill="#ff5f56"/>
   <circle cx="60" cy="34" r="6" fill="#ffbd2e"/>
   <circle cx="82" cy="34" r="6" fill="#27c93f"/>
-  <text x="108" y="39" font-size="15" fill="#8b949e">⚓  Anchor — verify_grounding</text>
+  <text x="108" y="39" font-size="15" fill="#8b949e">Anchor — verify_grounding</text>
   <line x1="8" y1="56" x2="872" y2="56" stroke="#21262d" stroke-width="1.5"/>
 
   <!-- refused -->
-  <text x="36" y="98" font-size="14" fill="#6e7681">Claim</text>
-  <text x="92" y="98" font-size="17" fill="#e6edf3">“We use MongoDB for analytics.”</text>
-  <text x="36" y="130" font-size="17" fill="#f85149" font-weight="bold">🚫  REFUSED</text>
-  <text x="176" y="130" font-size="16" fill="#8b949e">— your notes say PostgreSQL, not MongoDB</text>
-  <text x="36" y="156" font-size="14" fill="#6e7681" font-style="italic">no supporting notes found — Anchor will not assert it</text>
+  <rect x="28" y="80" width="3" height="84" rx="1.5" fill="#f85149"/>
+  <text x="48" y="98" font-size="14" fill="#6e7681">Claim</text>
+  <text x="104" y="98" font-size="17" fill="#e6edf3">“We use MongoDB for analytics.”</text>
+  <path d="M50 119 L66 135 M66 119 L50 135" stroke="#f85149" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <text x="80" y="131" font-size="17" fill="#f85149" font-weight="bold">REFUSED</text>
+  <text x="184" y="131" font-size="16" fill="#8b949e">— your notes say PostgreSQL, not MongoDB</text>
+  <text x="48" y="157" font-size="14" fill="#6e7681" font-style="italic">no supporting notes found — Anchor will not assert it</text>
 
-  <line x1="36" y1="184" x2="836" y2="184" stroke="#21262d" stroke-width="1"/>
+  <line x1="48" y1="186" x2="836" y2="186" stroke="#21262d" stroke-width="1"/>
 
   <!-- grounded -->
-  <text x="36" y="224" font-size="14" fill="#6e7681">Claim</text>
-  <text x="92" y="224" font-size="17" fill="#e6edf3">“We chose PostgreSQL as our primary data store.”</text>
-  <text x="36" y="256" font-size="17" fill="#3fb950" font-weight="bold">✅  GROUNDED</text>
-  <text x="186" y="256" font-size="16" fill="#3fb950">0.99</text>
-  <text x="36" y="286" font-size="15" fill="#58a6ff">└ Engineering/Architecture.md#^db-choice</text>
-  <text x="36" y="312" font-size="14" fill="#8b949e" font-style="italic">“Decision: we chose PostgreSQL as our primary data store, over MySQL…”</text>
+  <rect x="28" y="206" width="3" height="112" rx="1.5" fill="#3fb950"/>
+  <text x="48" y="224" font-size="14" fill="#6e7681">Claim</text>
+  <text x="104" y="224" font-size="17" fill="#e6edf3">“We chose PostgreSQL as our primary data store.”</text>
+  <path d="M50 251 l6 7 l13 -16" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="80" y="257" font-size="17" fill="#3fb950" font-weight="bold">GROUNDED</text>
+  <text x="196" y="257" font-size="16" fill="#3fb950">0.99</text>
+  <text x="48" y="287" font-size="15" fill="#58a6ff">Engineering/Architecture.md#^db-choice</text>
+  <text x="48" y="313" font-size="14" fill="#8b949e" font-style="italic">“Decision: we chose PostgreSQL as our primary data store, over MySQL…”</text>
 
   <line x1="8" y1="344" x2="872" y2="344" stroke="#21262d" stroke-width="1.5"/>
   <text x="440" y="375" font-size="14.5" fill="#8b949e" text-anchor="middle">Anchor cites the exact block — and refuses what your notes can’t support.</text>
